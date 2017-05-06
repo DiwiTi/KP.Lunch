@@ -1,0 +1,25 @@
+<f:layout name="Default" />
+
+<f:section name="Title">A list of monthly bills</f:section>
+
+<f:section name="Content">
+    <f:if condition="{monthlyBills}">
+        <f:then>
+            <ul>
+                <f:for each="{monthlyBills}" as="monthlyBill">
+                    <li>
+                        <f:link.action action="show" arguments="{monthlyBill: monthlyBill}">{monthlyBill.name}</f:link.action>
+                        <f:link.action action="edit" arguments="{monthlyBill: monthlyBill}">Edit</f:link.action>
+                        <f:form action="delete" arguments="{monthlyBill: monthlyBill}">
+                            <f:form.submit value="Delete" />
+                        </f:form>
+                    </li>
+                </f:for>
+            </ul>
+        </f:then>
+        <f:else>
+            <p>No monthly bills created yet.</p>
+        </f:else>
+    </f:if>
+    <p><f:link.action action="new">Create a new monthly bill</f:link.action></p>
+</f:section>

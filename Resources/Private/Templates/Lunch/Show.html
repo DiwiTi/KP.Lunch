@@ -1,0 +1,43 @@
+<f:layout name="DefaultUser" />
+
+<f:section name="Title">Bestellen Sie Ihr Essen</f:section>
+
+<f:section name="Content">
+    
+    <table id="table_id" class="display">
+        <thead>
+            <tr>
+                <th>Typ</th>
+                <th>Beschreibung</th>
+                <th>Datum</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <f:for each="{lunches}" as="lunch">
+                <tr>
+                    <td>
+                        {lunch.type}
+                    </td>
+                    <td>
+                        {lunch.description}
+                    </td>
+                    <td>
+                        {lunch.date}
+                    </td>
+                    <td>
+                        <f:form controller="Order" action="new">
+             
+                            <f:form.hidden name="idlunch" value="{lunch.idlunch}" additionalAttributes="{data-parsley-required: 'true'}" />
+                            
+                            <f:form.button class="btn btn-lg btn-primary btn-block plsWaitDialog"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></f:form.button>
+
+                        </f:form>
+                    </td>
+                </tr>
+            </f:for>
+        </tbody>
+    </table>
+    
+    <a href="../Lunch/show.html?tstamp={prevTstamp}">vorheriger Tag [{prevDate}]</a> | <a href="../Lunch/show.html?tstamp={nextTstamp}">nächster Tag [{nextDate}]</a>
+</f:section>

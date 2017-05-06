@@ -1,0 +1,18 @@
+{
+    "description": "",
+    "type": "neos-package",
+    "name": "kp/lunch",
+    "require": {
+        "neos/flow": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "KP\\Lunch\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "KP.Lunch"
+        }
+    }
+}

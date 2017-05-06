@@ -1,0 +1,31 @@
+<f:layout name="DefaultUser" />
+
+<f:section name="Title">Übersicht der Bezahlsumme</f:section>
+
+<f:section name="Content">
+   
+    
+    <ul>
+        Anzahl der Verschiedenen Essen:
+        <li>
+            A: {amountA}
+        </li>
+        <li>
+            B: {amountB}
+        </li>
+        <li>
+            C: {amountC}
+        </li>
+        <li>
+            Others: {amountOthers}
+        </li>        
+    </ul>
+    
+    Ingesamt zu Zahlen: {total}Euro
+    
+    
+    <f:form controller="Pdf" action="create">
+        <f:form.button class="btn btn-lg btn-primary btn-block plsWaitDialog"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></f:form.button>
+    </f:form>
+    
+</f:section>

@@ -1,0 +1,27 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 04.05.2017, 21:39:39
+    Author     : timdi
+*/
+
+
+.flashmessages {
+    position: fixed;
+    top: 30px; 
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    width: 500px;
+    border: solid 1px #FF0000;     
+    background-color: #FFADAD;   
+    color: #750000;
+}
+
+.flashmassages:hover {
+    display: none;
+}

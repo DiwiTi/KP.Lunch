@@ -1,0 +1,22 @@
+<f:layout name="DefaultLogin" />
+
+<f:section name="Content">
+
+    
+    <f:form controller="Login" action="create" class="form-signin">
+        <div class="form-signin-heading"></div>       
+        <div class="form-group">
+            <f:form.textfield name="uname" placeholder="Benutzer" class="form-control" additionalAttributes="{data-parsley-required: 'true', autofocus: 'autofocus'}" />
+        </div>
+        <div class="form-group">
+            <f:form.password name="pass" placeholder="Passwort" class="form-control" additionalAttributes="{data-parsley-required: 'true'}" />
+        </div>
+        <div class="form-group">
+            <f:form.password name="pass2" placeholder="Passwort-Wiederholen" class="form-control" additionalAttributes="{data-parsley-required: 'true'}" />
+        </div>
+        <f:form.button class="btn btn-lg btn-primary btn-block plsWaitDialog">Register</f:form.button>
+        
+        <a href="../Login/index.html">Bereits einen Nutzer?</a>
+    </f:form>
+
+</f:section>

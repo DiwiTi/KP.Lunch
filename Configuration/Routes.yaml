@@ -1,0 +1,43 @@
+#                                                                        #
+# Default subroutes configuration for the Flow package                   #
+#                                                                        #
+
+##
+# Default route to map the first three URL segments to package, controller and action
+# including optional format-suffix
+
+    
+
+-
+  name: 'Basic View'
+  uriPattern: ''
+  defaults:
+    '@package':    'KP.Lunch'
+    '@controller': 'Lunch'
+    '@action':     'index'
+    '@format':     'html'
+  appendExceedingArguments: true
+
+##
+# Default route to map the first three URL segments to package, controller and action
+# including optional format-suffix
+
+-
+  name: 'default with action and format'
+  uriPattern: '{@controller}/{@action}(.{@format})'
+  defaults:
+    '@package':    'KP.Lunch' 
+    '@format':     'html'
+  appendExceedingArguments: true
+
+##
+# Default route to map the first two URL segments to package and controller
+# optional third URL segment is mapped to action
+
+-
+  name: 'default'
+  uriPattern: '{@package}/{@controller}(/{@action})'
+  defaults:
+    '@action':     'index'
+    '@format':     'html'
+  appendExceedingArguments: true

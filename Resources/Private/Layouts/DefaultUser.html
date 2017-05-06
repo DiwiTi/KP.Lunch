@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="../../Public/ico_kupper.ico">
+
+        <title>Kupper-Essenbestellung</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="../../Public/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link href="../../Public/css/dashboard.css" rel="stylesheet">
+        
+        <!-- Styles for DataTables Extension -->
+        <link href="../../Public/css/datatables.css" rel="stylesheet">
+        
+        <!-- Styles for Flashmassages -->
+        <link href="../../Public/css/flashmsg.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- Top-Navbar -->
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="navbar-brand">
+                        <a href="../Lunch/index">
+                            <div class="logo">
+                                Kupper
+                            </div>
+                            <div class="addition">
+                                - Essenbestellung
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">{accountID} <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="../User/show">Einstellungen</a></li>
+                                <li class="divider"></li>
+                                <li><a href="../Login/logout">Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Sidebar -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-2 col-md-2 sidebar">
+                    <ul class="nav nav-sidebar">
+                        <li class="active"><a href="../Order/list.html"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>  Meine Essen</a></li>
+                        <li><a href="../Lunch/show.html"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>  Bestellen</a></li>
+                        <li><a href="../Order/pay.html"><span class="glyphicon glyphicon-euro" aria-hidden="true"></span>  Kosten&uuml;bersicht</a></li>
+                    </ul>
+                    <ul class="nav nav-sidebar">
+                        <li><a href="../User/show.html"><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>  Einstellungen</a></li>
+                        <li><a href="https://www.bestellung-vfd-wurzen.de/index.php"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>  VFD-Seite</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-10 col-sm-offset-2 col-md-10 col-md-offset-2 main">
+                    <!-- Hier werden Templates Geladen! -->
+                    <div>
+                        <f:flashMessages class="flashmessages" />
+                        <h1><f:render section="Title" /></h1>
+                        <f:render section="Content" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="../../Public/js/jquery.min.js"></script>
+        <script src="../../Public/js/bootstrap.min.js"></script>
+        <script src="../../Public/js/datatables.js"></script>
+        <script>
+            $(document).ready( function () {
+                $('#table_id').DataTable();
+            } );
+        </script>
+    </body>
+</html>

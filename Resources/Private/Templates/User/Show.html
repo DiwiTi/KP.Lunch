@@ -1,0 +1,21 @@
+<f:layout name="DefaultUser" />
+
+<f:section name="Title">Einstellungen der Userdaten</f:section>
+
+<f:section name="Content">
+    
+    <f:form controller="User" action="change" style="width: 250px;">
+             
+        <div class="form-group">
+            <f:form.textfield name="firstName" placeholder="Vorname" value="{user.firstName}" class="form-control" additionalAttributes="{data-parsley-required: 'true', autofocus: 'autofocus'}" />
+        </div>
+        <div class="form-group">
+            <f:form.textfield name="lastName" placeholder="Nachname" value="{user.lastName}" class="form-control" additionalAttributes="{data-parsley-required: 'true'}" />
+        </div>
+        <div class="form-group">
+            <f:form.textfield name="email" placeholder="E-Mail" value="{user.email}" class="form-control" additionalAttributes="{data-parsley-required: 'true'}" />
+        </div>
+        <f:form.button class="btn btn-lg btn-primary btn-block plsWaitDialog">Ändern</f:form.button>
+        
+    </f:form>
+</f:section>
