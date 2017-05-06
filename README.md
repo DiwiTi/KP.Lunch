@@ -9,7 +9,7 @@ How To:
 
 1. Need a running neos/flow 4 Framework
 2. Add KP.Lunch Package to Applications
-3. Enable KP.Lunch Routes in Config
+3. Enable KP.Lunch Routes in Configuration
 4. Run SQL Script
 5. Navigate with a Browser to Host-IP
 6. Create a User
